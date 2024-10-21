@@ -158,7 +158,7 @@
             <p>Experience The Famous National Park- Phang Nga Bay on a Luxury Cruise Equipped with a "Full Bar, Day Beds, DJ and Dance Floor". 
               Visit Maldives and Explore the Sea Caves of Sea house.Enjoy a beautiful Sunset Ocean Panorama While Having Dinner Onboard</p>
         </div>
-      {% comment %} <div class="swiper mySwiper"> 
+      <div class="swiper mySwiper"> 
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <img src="{% static 'image/swiper/1.jpg'%}" />
@@ -181,7 +181,7 @@
         </div>
         <div class="swiper-pagination"></div>
       </div>
-    </section>     {%endcomment%}
+    </section>    
 
                                                     <!- trending places ->
 
@@ -244,10 +244,10 @@
                 <form id="loginForm" class="form-register">
                   {% csrf_token %}
                   <h3>Login Form</h3>
-                  <input type="text" class="input-field" placeholder="User name" required name='username'>
-                  <input type="email" class="input-field" placeholder="Email Id" required name='email'>
-                  <input type="password" class="input-field" placeholder="Enter Password" required name='password'>
-                  <input type="password" class="input-field" placeholder="Confirm Password" required name='confirmpassword'>
+                  <input type="text" class="input-field" id="username" placeholder="User name"  name='username' required>
+                  <input type="email" class="input-field" id="emailid" placeholder="Email Id"  name='email' required>
+                  <input type="password" class="input-field" id="epassword" placeholder="Enter Password"  name='password' required>
+                  <input type="password" class="input-field" id="cpassword" placeholder="Confirm Password"  name='confirmpassword' required>
                   <input type="checkbox" class="chech-box" ><span>I agree to the terms & conditions</span>
                   <button type="submit" class="submit-btn">Register</button>
                 </form>
@@ -318,7 +318,10 @@ window.onclick = function (event) {
 
 function submitForm() {
     var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
+    var emailid = document.getElementById("emailid").value;
+    var password = document.getElementById("epassword").value;
+    var Password = document.getElementById("cpassword").value;    
+
 
     // Add your login logic here
     // For demonstration purposes, just displaying the input values
